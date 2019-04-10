@@ -5,7 +5,7 @@ using UnityEngine.TestTools.Constraints;
 using Is = NUnit.Framework.Is;
 using Object = UnityEngine.Object;
 
-namespace Atuvu.Allocation
+namespace Atuvu.Allocation.Tests
 {
     public sealed class GetComponents
     {

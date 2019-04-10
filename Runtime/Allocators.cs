@@ -1,6 +1,6 @@
 ﻿namespace Atuvu.Allocation
 {
-    public static class Allocators
+    internal static class Allocators
     {
         const int k_DefaultBufferSizes = 16;
 

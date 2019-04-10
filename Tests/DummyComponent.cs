@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Atuvu.Allocation
+namespace Atuvu.Allocation.Tests
 {
     public sealed class DummyComponent : MonoBehaviour
     {

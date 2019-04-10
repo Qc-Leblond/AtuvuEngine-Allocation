@@ -8,14 +8,14 @@ namespace Atuvu.Allocation
         public static TempList<T> GetComponentsNonAlloc<T>(this GameObject go)
         {
             var buffer = Allocators.GetBuffer<T>();
-            go.GetComponents(buffer);
+            go.GetComponents(buffer.list);
             return buffer;
         }
 
         public static TempList<Component> GetComponentsNonAlloc(this GameObject go, Type type)
         {
             var buffer = Allocators.GetBuffer<Component>();
-            go.GetComponents(type, buffer);
+            go.GetComponents(type, buffer.list);
             return buffer;
         }
 
@@ -27,7 +27,7 @@ namespace Atuvu.Allocation
         public static TempList<T> GetComponentsInChildrenNonAlloc<T>(this GameObject go, bool includeInactive)
         {
             var buffer = Allocators.GetBuffer<T>();
-            go.GetComponentsInChildren(includeInactive, buffer);
+            go.GetComponentsInChildren(includeInactive, buffer.list);
             return buffer;
         }
 
@@ -39,21 +39,21 @@ namespace Atuvu.Allocation
         public static TempList<T> GetComponentsInParentNonAlloc<T>(this GameObject go, bool includeInactive)
         {
             var buffer = Allocators.GetBuffer<T>();
-            go.GetComponentsInParent(includeInactive, buffer);
+            go.GetComponentsInParent(includeInactive, buffer.list);
             return buffer;
         }
 
         public static TempList<T> GetComponentsNonAlloc<T>(this Component component)
         {
             var buffer = Allocators.GetBuffer<T>();
-            component.GetComponents(buffer);
+            component.GetComponents(buffer.list);
             return buffer;
         }
 
         public static TempList<Component> GetComponentsNonAlloc(this Component component, Type type)
         {
             var buffer = Allocators.GetBuffer<Component>();
-            component.GetComponents(type, buffer);
+            component.GetComponents(type, buffer.list);
             return buffer;
         }
 
@@ -65,7 +65,7 @@ namespace Atuvu.Allocation
         public static TempList<T> GetComponentsInChildrenNonAlloc<T>(this Component component, bool includeInactive)
         {
             var buffer = Allocators.GetBuffer<T>();
-            component.GetComponentsInChildren(includeInactive, buffer);
+            component.GetComponentsInChildren(includeInactive, buffer.list);
             return buffer;
         }
 
@@ -77,7 +77,7 @@ namespace Atuvu.Allocation
         public static TempList<T> GetComponentsInParentNonAlloc<T>(this Component component, bool includeInactive)
         {
             var buffer = Allocators.GetBuffer<T>();
-            component.GetComponentsInParent(includeInactive, buffer);
+            component.GetComponentsInParent(includeInactive, buffer.list);
             return buffer;
         }
     }
