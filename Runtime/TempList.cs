@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace Atuvu.Allocation
 {
+    /// <summary>
+    /// A temp list is only valid until another temp list using the same type is created.
+    /// Trying to access this when out of date will result in an exception.
+    /// </summary>
     public struct TempList<T> : IReadOnlyList<T>
     {
         readonly int m_Version;
